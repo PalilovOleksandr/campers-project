@@ -1,0 +1,29 @@
+.header {
+  max-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  padding: 24px 64px;
+  border-bottom: 1px solid var(--color-badges);
+  background-color: var(--color-inputs);
+}
+
+.logo {
+  margin-right: 450px;
+}
+
+.navigation {
+  display: flex;
+  gap: 32px;
+  list-style-type: none;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.active {
+  color: var(--color-button-hover);
+}

@@ -1,0 +1,28 @@
+.section {
+  height: 100vh;
+  background-image: url(/images/hero-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  padding: 64px;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h1);
+  line-height: 67%;
+  color: var(--color-inputs);
+  margin-bottom: 16px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2);
+  line-height: 133%;
+  color: var(--color-inputs);
+  margin-bottom: 40px;
+}

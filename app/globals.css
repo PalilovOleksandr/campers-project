@@ -31,6 +31,13 @@ svg {
   max-width: 100%;
 }
 
+header,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 input,
 button,
 textarea,
@@ -48,7 +55,14 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   overflow-wrap: break-word;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0px auto;
 }
 
 /* ------------ TYPOGRAPHY ------------ */
@@ -71,7 +85,7 @@ p {
 
 /* ------------ LINKS ------------ */
 a {
-  color: var(--color-accent);
+  color: var(--color-text-primary);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -124,6 +138,7 @@ button.primary:hover {
   --color-accent-hover: var(--color-button-hover);
 
   /* 🔤 Typography */
+  --font-family: var(--font-inter-sans), sans-serif;
   --font-size-h1: 48px;
   --font-size-h2: 24px;
   --font-size-h3: 20px;
@@ -131,6 +146,4 @@ button.primary:hover {
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
-  --line-height-tight: 1.2;
-  --line-height-base: 1.5;
 }
