@@ -1,0 +1,97 @@
+.card {
+  border: 1px solid var(--color-gray-light);
+  border-radius: 20px;
+  padding: 24px;
+  gap: 24px;
+  display: flex;
+  background-color: var(--color-white);
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+}
+
+.image {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2);
+  line-height: 133%;
+  color: var(--color-text-primary);
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2);
+  line-height: 133%;
+  color: var(--color-text-primary);
+}
+
+.loveIcons {
+  font-size: 24px;
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.textRating {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--color-text-primary);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.textLocation {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  line-height: 150%;
+  color: var(--color-text-primary);
+}
+
+.textCard {
+  font-weight: var(--font-weight-regular);
+  line-height: 150%;
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

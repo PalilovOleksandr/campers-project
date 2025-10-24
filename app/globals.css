@@ -1,119 +1,101 @@
-@import 'normalize.css';
-/* ------------ RESET & BASE ------------ */
+/* === Reset Block  === */
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-  font-family: var(--font-inter-sans);
+/* Базові елементи */
+html {
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--color-text-primary);
-  background-color: var(--color-bg);
-  scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  background-color: var(--color-scheme-background);
+  color: var(--color-scheme-text);
+  text-rendering: optimizeLegibility;
+}
+
+/* Списки */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Посилання */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Зображення та медіа */
 img,
+picture,
+video,
+canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
-header,
-section {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-input,
+/* Формові елементи */
 button,
+input,
 textarea,
 select {
   font: inherit;
-  background: none;
+  color: inherit;
   border: none;
   outline: none;
+  background: none;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  overflow-wrap: break-word;
-}
-
-.container {
-  width: 90%;
-  max-width: 1280px;
-  margin: 0px auto;
-}
-
-/* ------------ TYPOGRAPHY ------------ */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-primary);
-  line-height: var(--line-height-tight);
-}
-
-p {
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-base);
-  color: var(--color-text-secondary);
-}
-
-/* ------------ LINKS ------------ */
-a {
-  color: var(--color-text-primary);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: var(--color-accent-hover);
-}
-
-/* ------------ BUTTONS ------------ */
 button {
   cursor: pointer;
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-medium);
-  border-radius: 8px;
-  padding: 0.75rem 1.25rem;
-  transition:
-    background-color 0.3s ease-in-out,
-    transform 0.2s ease;
 }
 
-button.primary {
-  background-color: var(--color-accent);
-  color: var(--color-white);
+/* Таблиці */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 }
 
-button.primary:hover {
-  background-color: var(--color-accent-hover);
-  transform: translateY(-1px);
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--second-family);
+  font-weight: var(--fw-bold);
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Інші */
+blockquote,
+figure {
+  margin: 0;
+}
+
+/* === Fonts Variables === */
+:root {
+  --font-family: var(--font-inter-sans), sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
 }
 
 /* ------------ Variables  ------------ */
@@ -129,21 +111,4 @@ button.primary:hover {
   --color-button: #e44848;
   --color-button-hover: #d84343;
   --color-rating: #ffc531;
-
-  /* 🌈 Semantic */
-  --color-bg: var(--color-white);
-  --color-text-primary: var(--color-main);
-  --color-text-secondary: var(--color-text);
-  --color-accent: var(--color-button);
-  --color-accent-hover: var(--color-button-hover);
-
-  /* 🔤 Typography */
-  --font-family: var(--font-inter-sans), sans-serif;
-  --font-size-h1: 48px;
-  --font-size-h2: 24px;
-  --font-size-h3: 20px;
-  --font-size-body: 16px;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
 }

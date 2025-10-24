@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header/Header';
+import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
+import 'modern-normalize';
 
 const interSans = Inter({
   variable: '--font-inter-sans',
@@ -22,8 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={interSans.variable}>
       <body>
-        <Header />
-        <main>{children}</main>
+        <TanStackProvider>
+          <Header />
+          <main className="container">{children}</main>
+        </TanStackProvider>
       </body>
     </html>
   );

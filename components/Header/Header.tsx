@@ -3,24 +3,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import css from './Header.module.css';
-import Image from 'next/image';
 
 const Header = () => {
   const pathname = usePathname();
   return (
     <header className={css.header}>
-      <Link href="/" aria-label="Home">
-        <Image
-          src="/icons/company-logo.svg"
-          alt="company logo"
-          width={136}
-          height={16}
-          className={css.logo}
-        />
+      <Link href="/" className={css.logo} aria-label="Home">
+        <svg className={css.logoIcons}>
+          <use href="/icons/sprite.svg#logo"></use>
+        </svg>
       </Link>
 
-      <nav>
-        <ul className={css.navigation}>
+      <nav className={css.navigation}>
+        <ul className={css.navigationList}>
           <li>
             <Link
               href="/"

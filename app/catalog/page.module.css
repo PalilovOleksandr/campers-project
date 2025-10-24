@@ -1,0 +1,7 @@
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  padding: 48px 64px;
+  gap: 64px;
+}

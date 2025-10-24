@@ -10,18 +10,16 @@
 }
 
 .title {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-h1);
+  font-weight: var(--fw-semibold);
+  font-size: 48px;
   line-height: 67%;
   color: var(--color-inputs);
   margin-bottom: 16px;
 }
 
 .text {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-h2);
+  font-weight: var(--fw-semibold);
+  font-size: 24px;
   line-height: 133%;
   color: var(--color-inputs);
   margin-bottom: 40px;

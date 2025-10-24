@@ -1,0 +1,33 @@
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 8px;
+  height: 56px;
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-gray);
+}
+
+.input {
+  border-radius: 12px;
+  padding: 16px 48px 16px 48px;
+  background-color: var(--color-inputs);
+}
+
+.svg {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  fill: currentColor;
+}
