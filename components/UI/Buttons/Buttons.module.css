@@ -17,6 +17,7 @@
 
 /* Розміри */
 .button.small {
+  max-width: 145px;
   padding: 16px 32px;
 }
 

@@ -1,7 +1,8 @@
 'use client';
 
-import { Camper } from '@/lib/api/clientApi';
+import { Camper } from '@/lib/api/api';
 import CamperCard from '../CamperCard/CamperCard';
+import css from './CampersList.module.css';
 
 type CampersListProps = {
   items: Camper[];
@@ -9,7 +10,7 @@ type CampersListProps = {
 
 const CampersList = ({ items }: CampersListProps) => {
   return (
-    <ul>
+    <ul className={css.campersList}>
       {items.map((item) => (
         <CamperCard key={item.id} camper={item} />
       ))}

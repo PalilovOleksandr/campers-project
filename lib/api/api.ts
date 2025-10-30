@@ -1,57 +1,35 @@
 import axios from 'axios';
+import { Camper, CampersListResponse } from '@/types/camper';
 
-const baseURL = process.env.NEXT_PUBLIC_API_URL;
+axios.defaults.baseURL = 'https://66b1f8e71ca8ad33d4f5f63e.mockapi.io';
 
-export const api = axios.create({
-  baseURL,
-  withCredentials: true,
-});
+interface getCampersProps {
+  page: number;
+  limit: number;
+}
 
-export type Camper = {
-  id: string;
-  name: string;
-  price: number;
-  rating: number;
-  location: string;
-  description: string;
-  form: string;
-  length: string;
-  width: string;
-  height: string;
-  tank: string;
-  consumption: string;
-  transmission: string;
-  engine: string;
-  AC: boolean;
-  bathroom: boolean;
-  kitchen: boolean;
-  TV: boolean;
-  radio: boolean;
-  refrigerator: boolean;
-  microwave: boolean;
-  gas: boolean;
-  water: boolean;
-  gallery: PhotoCamper[];
-  reviews: ReviewsCamper[];
+export const getCampers = async ({
+  page,
+  limit = 4,
+}: getCampersProps): Promise<CampersListResponse> => {
+  try {
+    const { data } = await axios.get<CampersListResponse>('/campers', {
+      params: { page, limit },
+    });
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      'Unable to retrieve the list of campers. Please try again later.'
+    );
+  }
 };
 
-export type PhotoCamper = {
-  thumb: string;
-  original: string;
-};
-
-type ReviewsCamper = {
-  reviewer_name: string;
-  reviewer_rating: number;
-  comment: string;
-};
-
-export type CampersListResponse = {
-  total: number;
-  items: Camper[];
-};
-
-export const getCampers = async () => {
-  const res = await api.get<CampersListResponse>('/campers');
-  return res.data;
+export const getCamperById = async (id: number): Promise<Camper> => {
+  try {
+    const { data } = await axios.get<Camper>(`/campers/${id}`);
+    return data;
+  } catch {
+    throw new Error('Unable to retrieve camper. It might not exist.');
+  }
 };

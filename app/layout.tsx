@@ -26,7 +26,7 @@ export default function RootLayout({
       <body>
         <TanStackProvider>
           <Header />
-          <main className="container">{children}</main>
+          <main>{children}</main>
         </TanStackProvider>
       </body>
     </html>

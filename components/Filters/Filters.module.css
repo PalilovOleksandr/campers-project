@@ -1,4 +1,32 @@
-.location {
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.label {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  height: 56px;
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-gray);
+}
+
+.input {
+  color: var(--color-main);
+  border-radius: 12px;
+  padding: 16px 48px 16px 48px;
+  background-color: var(--color-inputs);
+}
+
+.svg {
+  position: absolute;
+  left: 20px;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }
