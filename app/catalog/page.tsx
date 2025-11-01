@@ -1,17 +1,12 @@
-import { getCampers } from '@/lib/api/api';
+import Filters from '@/components/Filters/Filters';
 import css from './page.module.css';
 import CampersList from '@/components/CampersList/CampresList';
-import Filters from '@/components/Filters/Filters';
 
-const Catalog = async () => {
-  const catalog = await getCampers({ page: 1, limit: 4 });
-
+export default function CampersPage() {
   return (
-    <section className={css.section}>
+    <div className={css.wrapper}>
       <Filters />
-      {catalog?.total > 0 && <CampersList items={catalog.items} />}
-    </section>
+      <CampersList />
+    </div>
   );
-};
-
-export default Catalog;
+}
